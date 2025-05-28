@@ -119,123 +119,98 @@
 <!--Service-->  
 
 <!-- Portfolio -->
-<section id="Portfolio" class="content"> 
-   <div class="container portfolio_title"> 
-    <head>
+<section id="Portfolio" class="content">
   <style>
-	  
-#portfolio_wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
+    .portfolio-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
 
-.portfolio-item {
-  flex: 0 1 22%;
-  max-width: 300px;
-  float: none !important;
-}
-	  
-  /* Centrar galería y limitar ancho */
-  .portfolio {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
+    .portfolio-item {
+      flex: 1 1 calc(50% - 20px);
+      max-width: calc(50% - 20px);
+      box-sizing: border-box;
+    }
 
-  /* Images and videos with uniform size */
-  .portfolio_img img,
-  .portfolio_img video {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border-radius: 8px;
-    display: block;
-  }
+    .portfolio-item img,
+    .portfolio-item video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+    }
 
-  /* Size of titles within figcaption */
-  figcaption h2 {
-    font-size: 2rem;
-    line-height: 1.4;
-  }
+    .portfolio-caption {
+      text-align: center;
+      margin-top: 10px;
+    }
 
-  figcaption span {
-    font-size: 0.9rem;
-  }
+    @media (max-width: 768px) {
+      .portfolio-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
 
-  /* Optional: centering of the title text */
-  figcaption div {
-    text-align: center;
-  }
+  <h2 style="text-align: center;">Physics Open House 2024</h2>
+  <h6 style="text-align: center;">Te mostramos algunos de los momentos más destacados del evento</h6>
 
-  /* **New CSS for centering filters** */
-  #filters {
-    display: flex; /* Make it a flex container */
-    justify-content: center; /* Center items horizontally */
-    width: 100%; /* Ensure it takes full width to center effectively */
-  }
+  <div class="portfolio-container">
+    <div class="portfolio-item">
+      <img src="img/openhouse2024_1.jpg" alt="Participantes">
+      <div class="portfolio-caption"><h3>Participantes</h3></div>
+    </div>
 
-  #filters ul {
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-  }
+    <div class="portfolio-item">
+      <img src="img/openhouse2024_2.jpg" alt="Estudiantes">
+      <div class="portfolio-caption"><h3>Estudiantes de escuela</h3></div>
+    </div>
 
-  #filters li {
-    display: inline-block; /* Make list items display inline */
-    margin: 0 10px; /* Add some horizontal spacing between items */
-  }
-</style>
+    <div class="portfolio-item">
+      <img src="img/openhouse2024_3.jpg" alt="Cómite Organizador">
+      <div class="portfolio-caption"><h3>Comité Organizador</h3></div>
+    </div>
 
-</head>
+    <div class="portfolio-item">
+      <img src="img/openhouse2024_4.jpg" alt="Recreación">
+      <div class="portfolio-caption"><h3>Recreación</h3></div>
+    </div>
 
-<h2>Physics Open House 2024</h2> 
-<h6>Te mostramos algunos de los momentos más destacados del evento</h6>
+    <div class="portfolio-item">
+      <img src="img/openhouse2024_5.jpg" alt="Experiencia en Laboratorios">
+      <div class="portfolio-caption"><h3>Experiencia en los laboratorios</h3></div>
+    </div>
 
-<div class="portfolio"> 
-  <div id="filters" class="eigth columns">
-    <ul class="clearfix">
-      <li><a id="all" href="#" data-filter="*" class="active"><h5>Todo</h5></a></li>
-      <li><a href="#" data-filter=".nature"><h5>Estudiantes</h5></a></li>
-      <li><a href="#" data-filter=".wildlife"><h5>Profesores</h5></a></li>
-      <li><a href="#" data-filter=".citylife"><h5>Videos</h5></a></li>
-    </ul>
-  </div>
+    <div class="portfolio-item">
+      <video autoplay muted loop preload="metadata">
+        <source src="img/openhouse2024_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="portfolio-caption"><h3>Diversión</h3></div>
+    </div>
 
-  <div class="isotope fadeInLeft animated wow grid" id="portfolio_wrapper">  
-    <figure class="portfolio-item one-four wildlife isotope-item effect-oscar">
-      <div class="portfolio_img"><img src="img/openhouse2024_1.jpg" alt="Portfolio 1"></div> 
-      <figcaption><div><a href="img/openhouse2024_1.jpg" class="fancybox"><h2>Participantes</h2></a></div></figcaption>
-    </figure>
+    <div class="portfolio-item">
+      <video autoplay muted loop preload="metadata">
+        <source src="img/openhouse2024_video1.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="portfolio-caption"><h3>Haciendo ciencia</h3></div>
+    </div>
 
-    <figure class="portfolio-item one-four nature isotope-item effect-oscar">
-      <div class="portfolio_img"><img src="img/openhouse2024_3.jpg" alt="Portfolio 2"></div>
-      <figcaption><div><a href="img/openhouse2024_2.jpg" class="fancybox"><h2>Estudiantes<br><span>de escuela<span></h2></a></div></figcaption>
-    </figure>
-
-    <figure class="portfolio-item one-four wildlife isotope-item effect-oscar">
-      <div class="portfolio_img"><img src="img/openhouse2024_3.jpg" alt="Portfolio 3"></div>
-      <figcaption><div><a href="img/openhouse2024_3.jpg" class="fancybox"><h2>Cómite<br><span>Organizador<span></h2></a></div></figcaption>
-    </figure>
-
-    <figure class="portfolio-item one-four nature isotope-item effect-oscar">
-      <div class="portfolio_img"><img src="img/openhouse2024_4.jpg" alt="Portfolio 4"></div>
-      <figcaption><div><a href="img/openhouse2024_4.jpg" class="fancybox"><h2>Recreación</h2></a></div></figcaption>
-    </figure>
-
-    <figure class="portfolio-item one-four nature isotope-item effect-oscar">
-      <div class="portfolio_img"><img src="img/openhouse2024_5.jpg" alt="Portfolio 5"></div>
-      <figcaption><div><a href="img/openhouse2024_5.jpg" class="fancybox"><h2>Experiencia<br><span>en los<br><span>laboratorios<span></h2></a></div></figcaption>
-    </figure>
-
-  </div>
-</div>
-
-  <div class="portfolio_btm"></div>
-   <div id="project_container">
-    <div class="clear"></div>
-    <div id="project_data"></div>
+    <div class="portfolio-item">
+      <video autoplay muted loop preload="metadata">
+        <source src="img/openhouse2024_video2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <div class="portfolio-caption"><h3>Conociendo los laboratorios</h3></div>
+    </div>
   </div>
 </section>
 
