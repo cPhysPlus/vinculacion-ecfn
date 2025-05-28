@@ -130,7 +130,7 @@
     padding: 20px;
   }
 
-  /* Imágenes y videos con tamaño uniforme */
+  /* Images and videos with uniform size */
   .portfolio_img img,
   .portfolio_img video {
     width: 100%;
@@ -140,7 +140,7 @@
     display: block;
   }
 
-  /* Tamaño de los títulos dentro del figcaption */
+  /* Size of titles within figcaption */
   figcaption h2 {
     font-size: 2rem;
     line-height: 1.4;
@@ -150,11 +150,29 @@
     font-size: 0.9rem;
   }
 
-  /* Opcional: centrado del texto del título */
+  /* Optional: centering of the title text */
   figcaption div {
     text-align: center;
   }
-  </style>
+
+  /* **New CSS for centering filters** */
+  #filters {
+    display: flex; /* Make it a flex container */
+    justify-content: center; /* Center items horizontally */
+    width: 100%; /* Ensure it takes full width to center effectively */
+  }
+
+  #filters ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+
+  #filters li {
+    display: inline-block; /* Make list items display inline */
+    margin: 0 10px; /* Add some horizontal spacing between items */
+  }
+</style>
 
 </head>
 
@@ -162,12 +180,12 @@
 <h6>Te mostramos algunos de los momentos más destacados del evento</h6>
 
 <div class="portfolio"> 
-  <div id="filters" class="eigth columns" style="text-align: center;">
-    <ul class="clearfix" style="display: inline-block; list-style: none; padding: 0;">
-      <li style="display: inline-block; margin: 0 10px;"><a id="all" href="#" data-filter="*" class="active"><h5>Todo</h5></a></li>
-      <li style="display: inline-block; margin: 0 10px;"><a href="#" data-filter=".nature"><h5>Estudiantes</h5></a></li>
-      <li style="display: inline-block; margin: 0 10px;"><a href="#" data-filter=".wildlife"><h5>Profesores</h5></a></li>
-      <li style="display: inline-block; margin: 0 10px;"><a href="#" data-filter=".citylife"><h5>Videos</h5></a></li>
+  <div id="filters" class="eigth columns">
+    <ul class="clearfix">
+      <li><a id="all" href="#" data-filter="*" class="active"><h5>Todo</h5></a></li>
+      <li><a href="#" data-filter=".nature"><h5>Estudiantes</h5></a></li>
+      <li><a href="#" data-filter=".wildlife"><h5>Profesores</h5></a></li>
+      <li><a href="#" data-filter=".citylife"><h5>Videos</h5></a></li>
     </ul>
   </div>
 
@@ -203,7 +221,7 @@
           <source src="img/openhouse2024_video.mp4" type="video/mp4">
           <source src="img/openhouse2024_video.webm" type="video/webm">
           <source src="img/openhouse2024_video.ogg" type="video/ogg">
-          Tu navegador no soporta el elemento video.
+          Your browser does not support the video tag.
         </video>
       </div>
       <figcaption><div><a href="img/openhouse2024_video.mp4" class="fancybox"><h2>Diversión</h2></a></div></figcaption>
@@ -215,7 +233,7 @@
           <source src="img/openhouse2024_video1.mp4" type="video/mp4">
           <source src="img/openhouse2024_video1.webm" type="video/webm">
           <source src="img/openhouse2024_video1.ogg" type="video/ogg">
-          Tu navegador no soporta el elemento video.
+          Your browser does not support the video tag.
         </video>
       </div>
       <figcaption><div><a href="img/openhouse2024_video1.mp4" class="fancybox"><h2>Haciendo<br><span>ciencia</span></h2></a></div></figcaption>
@@ -227,7 +245,7 @@
           <source src="img/openhouse2024_video2.mp4" type="video/mp4">
           <source src="img/openhouse2024_video2.webm" type="video/webm">
           <source src="img/openhouse2024_video2.ogg" type="video/ogg">
-          Tu navegador no soporta el elemento video.
+          Your browser does not support the video tag.
         </video>
       </div>
       <figcaption><div><a href="img/openhouse2024_video2.mp4" class="fancybox"><h2>Conociendo<br><span>los laboratorios<span></h2></a></div></figcaption>
