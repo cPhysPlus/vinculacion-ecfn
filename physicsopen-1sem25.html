@@ -552,30 +552,6 @@ video::-webkit-media-controls-start-playback-button {
   display: none !important;
 }
 </style>
-
-<script>
-    document.querySelectorAll('img.enlargeable').forEach(img => {
-      img.addEventListener('click', () => {
-	const overlay = document.createElement('div');
-	overlay.className = 'lightbox';
-
-	const bigImg = document.createElement('img');
-	bigImg.src = img.src;
-
-	overlay.appendChild(bigImg);
-	document.body.appendChild(overlay);
-
-	// Close on overlay click or ESC key
-	overlay.addEventListener('click', () => overlay.remove());
-	document.addEventListener('keydown', function handler(e) {
-	  if (e.key === 'Escape') {
-	    overlay.remove();
-	    document.removeEventListener('keydown', handler);
-	  }
-	});
-      });
-    });
-</script>
 	
 </body>
 </html>
